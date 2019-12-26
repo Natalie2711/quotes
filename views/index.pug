@@ -1,0 +1,21 @@
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Sign Up
+
+        // register form
+        form(method='POST' action='/submit-form')
+          div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text' placeholder='first and last' name='name')
+          div.form-group
+            label(for='phoneNumber') Phone Number:
+            input#phoneNumber.form-control(type='tel' placeholder='Enter your phone number' name='phoneNumber')
+          label(for = 'package') Package Selection:
+          each title in titles
+            //- name of each option to choose            
+            label=title 
+              //- name: the name of the field that is printed out { name: 'thuy', phoneNumber: '16505461981', title: 'motivation' }
+              input(type='radio' value=title name='title')
+          button.btn.btn-primary(type='submit') Subscribe
