@@ -13,9 +13,9 @@ block content
             label(for='phoneNumber') Phone Number:
             input#phoneNumber.form-control(type='tel' placeholder='Enter your phone number' name='phoneNumber')
           label(for = 'package') Package Selection:
-          each title in titles
+          each p in packages
             //- name of each option to choose            
-            label=title 
-              //- name: the name of the field that is printed out { name: 'thuy', phoneNumber: '16505461981', title: 'motivation' }
-              input(type='radio' value=title name='title')
+            label=p.title 
+              //- name: the name of the field that is printed out { name: 'thuy', phoneNumber: '16505461981', id: '2' }
+              input(type='radio' value=p._id name='packageId')
           button.btn.btn-primary(type='submit') Subscribe
